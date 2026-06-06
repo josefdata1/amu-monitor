@@ -1,0 +1,30 @@
+name: AMU Telegram Monitor
+on:
+  schedule:
+    - cron: '*/44 * * * *'   # Every 44 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install playwright pillow imagehash beautifulsoup4 requests
+      - run: playwright install chromium
+      - run: python monitor.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+      - name: Save baselines
+        run: |
+          git config user.name "AMUBot"
+          git config user.email "bot@users.noreply.github.com"
+          git add baselines.json screenshots/
+          git diff --staged --quiet || (git commit -m "Update baselines" && git push)
+          
