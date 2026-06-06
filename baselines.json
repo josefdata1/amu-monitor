@@ -1,0 +1,22 @@
+{
+  "Main Portal": {
+    "visual": "ad2d25a5252f5a5a",
+    "text": "42e167b03335eab3de220ffacd1af78097077476e1746598c552065f6c212a09"
+  },
+  "Results": {
+    "visual": "fa7a7aba95850505",
+    "text": "13c600da4d483863a69edbd30fe168392166ccf3524308ba92efd446654d9ba3"
+  },
+  "Counselling": {
+    "visual": "fa7a7abc95850505",
+    "text": "1e69ba8b5eb0b5362cb070d508ef4efb76c29c4948bfb2d945c39260bfec8ff7"
+  },
+  "School Results": {
+    "visual": "fa7a7a7a7a2aa080",
+    "text": "450b6f197759e62b8063f3467b07fc644e4c40c5f35ec7d6171d92552b3cf88f"
+  },
+  "PhD Results": {
+    "visual": "fa7a7a7a7ad08081",
+    "text": "25ca26dc09aeeb9f6b3fd3f8832424f9e52ba007dc6c7cc7ba5c460bfa5d6c7b"
+  }
+}
